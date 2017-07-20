@@ -1,0 +1,41 @@
+@keyframes blink {
+ 50% {
+  opacity:0.0;
+ }
+}
+@webkit-keyframes-blink {
+ 50% {
+  opacity:0.0;
+ }
+}
+.b1 {
+ animation: blink .8s step-start 0s infinite;
+ -webkit-animation:blink .8s step-start 0s infinite;
+}
+body {
+ background-color:#110E13;
+ color:#C0FFC0;
+ font-family:Rod, "Lucida Console";
+}
+.c {
+ margin-right:auto;
+ margin-left:auto;
+ text-align:center;
+}
+.t {
+ margin-left:40px;
+ margin-right:100px;
+}
+.t1 {
+ margin-left:10px;
+}
+.t2 {
+ margin-left:20px;
+}
+
+a {
+ color:#C0FFC0;
+}
+.small {
+ font-size:10pt;
+}
