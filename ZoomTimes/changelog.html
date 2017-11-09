@@ -1,28 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8"/>
+<meta charset="UTF-8" />
 <link rel="icon" 
-      type="image/png" 
-      href="Images/Favicon.png">
+    type="image/png" 
+    href="Images/Favicon.png" />
+<link rel="stylesheet" type="text/css" href="index_css.css" />
+<title>Changelog - The Zoom Times</title>
 <style>
-body {
-    font-family:"Times New Roman";
-    background-image: url(Images/BlueBackground1.jpg);
-    background-color: blue;
-}
-a:hover {
-	color: lightblue;
-}
-a:active {
-	color: white;
-}
 li {
 	margin-top:20px;
 }
 </style>
-<link rel="stylesheet" href="index_css.css">
-<title>Changelog - The Zoom Times</title>
 </head>
 <body>
 <video autoplay loop muted class="bgvideo">
@@ -30,11 +19,16 @@ li {
 </video>
 <header class=center><p class=yetanotherclass><a href="index.html"><br><img src="Images/Logo.png" alt="The Zoom Times Website" class="center" style="height:80px;border=0;" /><br></a>
 </p>
-<p><b>Changelog of the Website</b></p></header>
+<b>Changelog of the Website</b></header>
 <div>
-<p class=whitetext><span class=tab>Welcome</span> to the site changelog! 
+<p class=whitetext>Welcome to the site changelog! 
 This log mostly documents major changes to the site, be they under the hood or graphics-related, so more minor updates to the site's text may not be listed.<br><br></p>
 <ul>
+<li>11/08/17 - Turns out I'd only tested the site on Firefox; in Google Chrome the main page looked much worse! I've fixed an error with the changelog/blog links overlapping, 
+and I've slightly desaturated the blue color of the borders to make them easier on the eyes in Chrome and similar browsers. 
+In addition, I've also made the code (especially the CSS styling) much cleaner and less redundant in general, and most excitingly on the programming side, 
+I've made paragraph indentation more or less automatic, meaning I won't have to specify when I want to indent the beginning of a paragraph 
+(which, for sites like these, would be pretty much all the time)! </li>
 <li>09/17/17 - No major visual or functional changes, but the site now passes the W3C validation! 
 In layman terms, this means the site can be read more easily by any web browser without internal errors that could cause problems with the page's appearance. 
 Additionally, this makes the general coding more professional, lets search engines find the site more readily, and gives the browsers a smoother experience to work with.</li>
