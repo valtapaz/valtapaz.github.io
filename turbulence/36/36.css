@@ -1,0 +1,152 @@
+@import url(../main.css);
+
+body {
+	background-image:url(../images/36Img/metalhall1.jpg);
+	min-height:100%;
+}
+hr {
+	border:2px outset rgba(100,120,120,.65);
+	border-radius:5px;
+}
+/*.N36poster {
+	width:40%;
+	position:fixed;
+	top:0;
+	right:0;
+	float:right;
+	mask-image:linear-gradient(to left,rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,0));
+	-webkit-mask-image:linear-gradient(to left,rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,1),rgba(0,0,0,0));
+	z-index:-1;
+}*/
+.N36poster {
+	width:40%;
+	position:fixed;
+	top:0;
+	left:0;
+	float:left;
+	mask-image:linear-gradient(to right,black,black,black,transparent);
+	-webkit-mask-image:linear-gradient(to right,black,black,black,transparent);
+	-ms-mask-image:linear-gradient(to right,black,black,black,transparent);
+	z-index:-1;
+}
+.pldiv {
+	float:left;
+	margin-top:15em;
+	margin-bottom:17em;
+}
+.info {
+	background-color:rgba(0,0,0,.9);
+	z-index:0;
+	position:relative;
+	display:table;
+	margin-top:15em;
+	margin-bottom:17em;
+	padding:1em;
+}
+.info h1, .Xplain h1 {
+	text-align:right;
+	/*color:#72f6ff;*/
+	color:#8af9aa;
+}
+.info h1 em {
+	font-style:normal;
+	font-size:120%;
+}
+.Xplain {
+	background-color:rgba(0,0,0,.9);
+	z-index:0;
+	position:relative;
+	display:table;
+	margin:10% 5em;
+	padding:1em;
+}
+.returnTop {
+	margin:0em auto 5em auto;
+	display:inline-block;
+	padding:.5em 2.5em;
+	position:sticky;
+	left:50%;
+	transform:translateX(-50%);
+	text-align:center;
+	font-variant:small-caps;
+	font-size:14pt;
+}
+#legalise {background-color:rgba(0,0,0,.9);}
+
+/*img[src*="logo-t"] {position:relative;}*/
+
+/*---------------------The Movie Toggle for Future Use---------------------
+.whiteout {
+	position:fixed;
+	width:100%;
+	min-height:100%;
+	top:0;
+	left:0;
+	opacity:0.9;
+	z-index:3;
+}
+#movie {
+	position:fixed;
+	background-color:rgba(0,0,0,0.9);
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	z-index:2;
+	opacity:0;
+	display:none;
+}
+.close {
+	position:fixed;
+	z-index:3;
+	display:none;
+	padding:0em;
+}
+#watch-check:checked ~ #movie {
+	display:block;
+	opacity:1;
+	animation:fadein .7s ease;
+}
+#watch-check:checked ~ label .close {
+	display:block;
+	z-index:3;
+}
+#watch-check ~ label, .close {
+	cursor:pointer;
+	text-decoration:underline;
+}
+#watch-check {display:none;}
+iframe {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:56vw; 
+	height:31.5vw;
+	border:none;
+}*/
+
+@media only screen and (max-width:1400px) {
+	.returnTop {margin-top:0em;}
+}
+
+@media only screen and (max-width:1320px) {
+	.N36poster {display:none;}
+	div[class="info c4"], .Xplain {
+		float:none;
+		margin:auto;
+		top:10em;
+		width:66%;
+	}
+	iframe {
+		width:68vw;
+		height:38.25vw;
+	}
+	.info {background-color:rgba(0,0,0,.7);}
+	.pldiv {display:none;}
+	.canvasBlock {background-size:auto 150vh;}
+	.returnTop {margin-top:10em;}
+}
+@media only screen and (max-height:700px) {
+	.canvasBlock {height:140vh;}
+}

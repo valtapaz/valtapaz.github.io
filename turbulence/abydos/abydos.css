@@ -1,0 +1,277 @@
+@import url(../main.css);
+
+/*@keyframes colorful {
+	0% {background-color:#1fa678;}
+	10% {background-color:#1fa678;}
+	25% {background-color:#00609d;}
+	35% {background-color:#00609d;}
+	50% {background-color:#d40f30;}
+	60% {background-color:#d40f30;}
+	75% {background-color:#8a00eb;}
+	85% {background-color:#8a00eb;}
+	100% {background-color:#1fa678;}
+}*/
+body {
+	background-image:url(../images/abyImg/bridgeBroken1.jpg);
+	min-height:100%;
+}
+.ABYposter {
+	width:40%;
+	position:fixed;
+	top:0;
+	left:0;
+	float:left;
+	mask-image:linear-gradient(to right,black,black,black,transparent);
+	-webkit-mask-image:linear-gradient(to right,black,black,black,transparent);
+	/*-ms-mask-image:linear-gradient(to right,black,black,black,transparent); Sadly, masks are still broken in Edge after this*/
+	z-index:-1;
+}
+.pldiv {
+	float:left;
+	margin-top:15em;
+	margin-bottom:5em;
+}
+.info {
+	background-color:rgba(0,0,0,.75);
+	z-index:0;
+	position:relative;
+	display:table;
+	margin-top:15em;
+	margin-bottom:5em;
+	padding:1em;
+}
+.info h1 {
+	text-align:right;
+	color:#af6;
+	transition:color 1.5s;
+}
+.info h1 em {
+	font-style:normal;
+	font-size:120%;
+}
+.watchDiv {
+	margin-left:auto;
+	margin-right:auto;
+	position:sticky;
+	text-align:center;
+}
+.returnTop {
+	margin:-5em auto 2em auto;
+	display:inline-block;
+	padding:.5em 2.5em;
+	position:relative;
+	bottom:0em;
+	left:50%;
+	transform:translateX(-50%);
+	text-align:center;
+	font-variant:small-caps;
+	font-size:14pt;
+}
+/*img[src*="logo-t"] {position:relative;}*/
+
+/*----------------------Stuff for the Characters Page----------------------*/
+.pldiv1 {
+	z-index:0;
+	position:relative;
+	float:left;
+	display:table;
+	top:15vh;
+	height:10em;
+}
+.char {
+	background-color:rgba(0,0,0,.75);
+	z-index:0;
+	position:relative;
+	display:table;
+	top:15vh;
+	margin-bottom:5em;
+	/*left:15em;*/
+	padding:1em;
+}
+.char h1 {
+	text-align:right;
+	color:#af6;
+	transition:color 1.5s;
+}
+.char h1 em {
+	font-style:normal;
+	font-size:120%;
+}
+
+.canvasBlock {
+	width:100%;
+	height:110vh;
+	position:relative;
+	top:0px;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position:center;
+	z-index:1;
+}
+.fixDiv {
+	width:100vw;
+	height:100vh;
+	position:fixed;
+	top:0;
+	left:0;
+	background-color:hsl(160,69%,39%);
+	transition:background-color 2s;
+	z-index:-2;
+}
+/*background-color:#1fa678; hsl(160,69%,39%);
+background-color:#00609d; hsl(203,100%,31%);
+background-color:#d40f30; hsl(350,87%,45%);
+background-color:#8a00eb; hsl(275,100%,46%)
+
+.cN h1, .cM h1, .cA h1, .cD h1 {color:#1fa678;}
+.cN {background-image:url(../images/abyImg/char-nephthys-zl.png);}
+.cN:hover ~ .fixDiv {background-color:#1fa678;}
+.cN:hover h1, .cN:hover ~ .canvasBlock h1 {color:#1fa678;}
+.cM {background-image:url(../images/abyImg/char-maat-zl2.png);}
+.cM:hover ~ .fixDiv {background-color:#00609d;}
+.cM:hover h1, .cM:hover ~ .canvasBlock h1 {color:#00609d;}
+.cA {background-image:url(../images/abyImg/char-anhur-zl.png);}
+.cA:hover ~.fixDiv {background-color:#d40f30;}
+.cA:hover h1, .cA:hover ~ .canvasBlock h1 {color:#d40f30;}
+.cD {background-image:url(../images/abyImg/char-djebauti-zl.png);}
+.cD:hover ~ .fixDiv {background-color:#8a00eb;}
+.cD:hover h1, .cD:hover ~ .canvasBlock h1 {color:#8a00eb;}
+*/
+
+.cN {background-image:url(../images/abyImg/char-nephthys-zl.png);}
+.cN:hover ~ .fixDiv {background-color:hsl(160,69%,39%);}
+.cN h1, .cM h1, .cA h1, .cD h1, .cN:hover h1, .cN:hover ~ .canvasBlock h1 {color:hsl(160,69%,39%);}
+.cM {background-image:url(../images/abyImg/char-maat-zl2.png);}
+.cM:hover ~ .fixDiv {background-color:hsl(203,100%,31%);}
+.cM:hover h1, .cM:hover ~ .canvasBlock h1 {color:hsl(203,100%,31%);}
+.cA {background-image:url(../images/abyImg/char-anhur-zl.png);}
+.cA:hover ~.fixDiv {background-color:hsl(350,87%,45%);}
+.cA:hover h1, .cA:hover ~ .canvasBlock h1 {color:hsl(350,87%,45%);}
+.cD {background-image:url(../images/abyImg/char-djebauti-zl.png);}
+.cD:hover ~ .fixDiv {background-color:hsl(275,100%,46%);}
+.cD:hover h1, .cD:hover ~ .canvasBlock h1 {color:hsl(275,100%,46%);}
+/*
+	width:100vw;
+	height:100vh;
+	content:url(../images/aby-loc/bridgeUnder.jpg);
+	position:absolute;
+	bottom:0;
+	user-select:none;
+	opacity:0;
+	transition:opacity 1s;
+*/
+/*------------------The Hard Part - The Movie Toggle----------------------*/
+/*.whiteout {
+	position:fixed;
+	width:100%;
+	min-height:100%;
+	top:0;
+	left:0;
+	opacity:0.9;
+	z-index:3;
+} */
+#movie {
+	position:fixed;
+	background-color:rgba(0,0,0,0.9);
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	z-index:2;
+	opacity:0;
+	display:none;
+}
+.close {
+	position:fixed;
+	z-index:3;
+	display:none;
+	padding:0em;
+}
+#watch-check:checked ~ #movie {
+	display:block;
+	opacity:1;
+	animation:fadein .7s ease;
+}
+#watch-check:checked ~ label .close {
+	display:block;
+	z-index:3;
+}
+#watch-check ~ label, .close {
+	cursor:pointer;
+	text-decoration:underline;
+}
+#watch-check:checked ~ #movie iframe {animation:topgo 1s;}
+#watch-check {display:none;}
+iframe {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:56vw; 
+	height:31.45vw;
+	border:none;
+}
+
+/*-----------------------------Final Div Thing-----------------------------*/
+/*Kinda useless for now as I'm not using it
+.hoverCover {
+	width:100vw;
+	height:100vh;
+	user-select:none;
+	position:absolute;
+	bottom:0px;
+}
+#finalDiv {
+	width:100vw;
+	height:100vh;
+	content:url(../images/abyImg/bridgeUnder.jpg);
+	position:absolute;
+	bottom:0;
+	user-select:none;
+	opacity:0;
+	transition:opacity 1s;
+}
+#finalDiv:hover {opacity:1;}
+
+#finalDiv_OLD {
+	position:absolute;
+	top:100%;
+	height:100%;
+	width:100%;
+	background-color:rgba(50,50,50,1);
+}*/
+
+@media only screen and (max-width:1320px) {
+	.ABYposter {display:none;}
+	div[class="info c4"] {
+		float:none;
+		margin:auto;
+		top:10em;
+		width:66%;
+	}
+	iframe {
+		width:68vw;
+		height:38.25vw;
+	}
+	.info {background-color:rgba(0,0,0,.7);}
+	.pldiv, .pldiv1 {display:none;}
+	.canvasBlock {background-size:auto 150vh;}
+	.char {
+		margin-left:auto;
+		margin-right:1em;
+		width:66%;
+		overflow:scroll;
+	}
+	.cN {background-position:73% center;}
+	.cM {background-position:15% center;}
+	.cA {background-position:20% center;}
+	.cD {background-position:25% center;}
+	.cN>.char {margin-right:auto;margin-left:2em;}
+	.cM>.char {top:30vh;}
+	.cA>.char {margin-right:auto;margin-left:2em;}
+	.cD>.char {top:20vh;}
+	
+}
+@media only screen and (max-height:700px) {
+	.canvasBlock {height:140vh;}
+}

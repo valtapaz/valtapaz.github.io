@@ -1,0 +1,106 @@
+@import url(main.css);
+
+/*------------------------------------------------------------Primary Page Layout------------------------------------------------------------*/
+div>div>a {color:black;}
+.col2, .front36 {filter:brightness(100%);transition:filter .6s;}
+.col2:hover, .col2:hover .front36 {filter:brightness(140%);}
+/*.frontABY {content:url(images/abydos-poster.jpg);} 
+.front36 {content:url(images/36-poster.png);}
+	These are alternatives in case I switch from <img> tags to <span> ones like I had in an earlier draft*/
+.col2:active {filter:brightness(250%);}
+.col1 {
+	height:100vh;
+	width:50%;
+	float:left;
+}
+.col2 {
+	margin:auto;
+	height:100vh;
+	width:56vh;
+}
+.frontIMG {
+	max-height:100%;/*Same note as below*/
+	height:100%;	/*Used to be 100vh, but that left space between the images at smaller browser sizes; looks like this doesn't break anything*/
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	z-index:-1;
+	object-fit:cover;
+	object-position:center bottom;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	user-drag:none;
+	-webkit-user-drag:none;
+	/*Looks like -moz-user-drag and -ms-user-drag don't make any difference here*/
+}
+.fullBG {
+	content:url(images/lightsL.jpg);
+	z-index:-1;
+	position:fixed;
+}
+.legal, #legalise {position:fixed;}
+#legalise {
+	bottom:3em;
+	background-color:rgba(25,25,25,.8);
+}
+/*------------------------------------------------------------Supplementary Pages------------------------------------------------------------*/
+.aboutBox {
+	background-color:rgba(0,0,0,.9);
+	margin:5em 10em 5em 10em;
+	padding:1em 2em 1em 2em;
+	position:absolute;
+	z-index:2;
+}
+.whiteout {
+	position:fixed;
+	background-color:rgba(0,0,0,.7);
+	width:100%;
+	height:100%;
+	left:0;
+	top:0;
+	z-index:1;
+}
+.dTxt, .dTxt:hover {filter:none;}
+table {margin:auto;}
+td, th {
+	background-color:rgba(50,50,50,.3);
+	padding:3px;
+}
+th[colspan="3"] {
+	background-color:rgba(0,0,0,0);
+	text-align:left;
+	font-size:16pt;
+}
+img[src*="logo-t"] {z-index:2;}
+/*---------------------------------------------------------------Media Queries---------------------------------------------------------------*/
+@media only screen and (max-width:1067px) {
+	.col1 {
+		min-width:100%;
+		height:50vh;
+		float:none;
+		margin-left:auto;
+		margin-right:auto;
+	}
+	.col2 {
+		height:50vh;
+		width:100%;
+		position:fixed;
+
+	}
+	.frontIMG {
+		position:absolute;
+		height:100%;
+		width:100%;
+	}
+	.aboutBox {margin: 5em 7em 5em 7em;}
+}
+@media only screen and (max-width:540px) {
+	.aboutBox {
+		margin:5em 2em 5em 2em;
+		padding:.5em 1.5em .5em 1.5em;
+	}
+	.marginBR {display:inline;}
+}
