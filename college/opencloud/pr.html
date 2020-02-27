@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<meta name="keywords" content="kdenlive,olive,free,premiere,video editor,linux"/>
+	<meta name="description" content="Kdenlive is one of the most advanced open source video editors ever, but can it compare to Adobe Premiere?"/>
+	<meta name="author" content="John Pavlat"/>
+	<meta name="copyright" content="John Pavlat"/>
+	<meta name="robots" content="index,follow"/>
+	<link rel="icon" type="image/svg" href="images/logo-opencloud2.svg"/>
+	<!--<link rel="stylesheet" type="text/css" href="css/opencloud.css"/>
+	<link rel="stylesheet" type="text/less" href="css/opencloud.less"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>-->
+	<link rel="stylesheet" type="text/css" href="css/opencloud.css"/>
+	<script src="scripts/opencloud.js"></script>
+	<title>Premiere Pro | Program Replacements | The Open Cloud</title>
+</head>
+<body onload="navListen()">
+<div class="wrapper">
+<header>
+	<div id="hamburger" onclick="menu(document.getElementById('topNav'))"><img alt="Click to view navigation" id="burger" src="images/hamburger.png" height="60"/></div>
+	<nav id="topNav">
+		<a href="index.html" id="navLogo"><img src="images/logo-opencloud2.svg" alt="Open Cloud logo" height="80"/></a>
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="news.html">News</a>
+		<a href="contact.html">Contact</a>
+		<a href="legal.html">Legal</a>
+		<!--<a href="programs.html">Programs</a>-->
+	</nav>
+</header>
+<nav id="subNav">
+	<span id="onPage">On this page:</span>
+	<a href="#top">Top</a>
+	<a href="#about">About</a>
+	<a href="#replacement">Replacements</a>
+	<a href="#downsides">Downsides</a>
+	<a href="#advantages">Advantages</a>
+	<a href="#other">Other&nbsp;Options?</a>
+</nav>
+
+<main>
+<img class="progImg c-3" src="images/logos/logo-kdenlive.png" alt="Kdenlive's logo: a vertical line dividing several lines on its left from a triangle resembling a play button on the right."/>
+<h1>Kdenlive</h1>
+<p>
+<a href="http://kdenlive.org/" target="_blank">Kdenlive</a> is probably one of the most advanced and modern open source video editors around. 
+Its features are remarkable, but working with the program raises one question: does it actually work? 
+<span id="about"></span></p>
+<h2>About</h2>
+<p>
+Kdenlive was made in 2002 as a non-linear video editor. It draws from several libraries to strengthen its abilities, 
+supporting various file formats with the help of <a href="https://ffmpeg.org/" target="_blank">FFmpeg</a> 
+and acheiving a variety of visual effects via the <a href="https://frei0r.dyne.org/" target="_blank">Frei0r effects</a> pack. 
+</p>
+<h2 id="replacement">As a Replacement...</h2>
+<p>
+Kdenlive is actually fairly capable editor. Both it and Premiere will snap clips together, which is essential when it comes to working with individual frames. 
+Perhaps the largest difference when simply moving clips of footage is that a moving clip in Kdenlive will actually stop at the edge of another clip in the same layer&mdash;a strong contrast to Premiere, 
+which will have any clip that's moved to a given area &ldquo;eat&rdquo; any piece of footage in its way. 
+Whether that qualifies as a feature or a bug depends on how annoying or helpful Premiere's &ldquo;eating&rdquo; is. 
+<span id="downsides"></span>
+</p>
+<h2>Downsides</h2>
+<p>
+Perhaps the biggest issue is that Kdenlive is that it isn't very stable, at least on Windows. 
+At some points Kdenlive has crashed, and at other points even a simple Fade In effect didn't work (although, admittedly, I don't know how much of that is my own inexperience with the program). 
+The lack of keyframes also serves as a problem; I feel keyframing an opacity setting would be far easier than attempting to use Fade In as an effect, 
+but then again perhaps I'm just used to the way Premiere works. I've heard that Kdenlive is far stable on Linux, although I haven't tried it on that. 
+<span id="advantages"></span></p>
+<h2>Advantages</h2>
+<p>
+As with Inkscape, the load time on Kdenlive is extremely fast. Its Frei0r effects actually allow it to do some things that are associated more with After Effects than Premiere 
+(such as a stylized pixelation or distorted corners effect) although Premiere itself still has a few of these on a deeper look. 
+</p>
+<h2>The Bottom Line</h2>
+<p>
+Kdenlive isn't the most stable program, but for the time being it's a pretty good alternative. 
+I'd certainly trust it, even if it isn't quite where Premiere is, though some patience may be required. 
+<span id="other"></span>
+</p>
+<h2>Other Options?</h2>
+<p>
+<a href="https://www.olivevideoeditor.org/" target="_blank">Olive Editor</a> is an extremely new video editor (its earliest sign of development only dates back to February of 2018!) 
+that nonetheless looks quite promising. Looking from the ground up like it was made to be a Premiere replacement, its keyboard shortcuts, 
+tool aesthetics and even UI to a degree are remarkably similar to Premiere's (somewhat alarmingly so, in fact). 
+It isn't anywhere near stable, as the developer himself admitted (with saving and loading being a particular offender as of April '19), 
+and its effects are soemwhat lacking (especially in terms of color), 
+but it looks like it could shape up to be a remarkable program, and I'll be very interested in whether it could surpass Kdenlive with the progress it's made so far.
+</p>
+<p>
+And then, of course, we have <a href="https://blender.org" target="_blank">Blender</a>. It may have not been made for video editing and may have a higher learning curge than other free video editors, 
+but it can get the job done, it's stable and it <em>works</em>. If being as certain as possibly that the project will render is number one on your priority list, I'd recommend simply going with this. 
+</p>
+</main>
+</div>
+
+<footer>
+	<div>
+		Copyright &copy; 2020 John Pavlat. All rights reserved, ironically. 
+		All <a href="https://validator.w3.org/nu/?doc=https://valtapaz.github.io/college/opencloud/pr.html" target="blank">HTML</a> and 
+		<a href="https://jigsaw.w3.org/css-validator/validator?uri=https://valtapaz.github.io/college/opencloud/css/opencloud.css&profile=css3svg&usermedium=all&warning=1&lang=en" target="blank">CSS</a> 
+		on this page is valid. 
+		<br />
+		<a href="privacy.html">Privacy Policy</a> | <a href="sitemap/sitemap.xml">Sitemap</a>
+	</div>
+</footer>
+</body>
+</html>

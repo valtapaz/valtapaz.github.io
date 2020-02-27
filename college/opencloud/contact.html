@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<meta name="keywords" content="open source,creative cloud,contact,alternative,adobe,webmaster,suggestion"/>
+	<meta name="description" content="Contact the author for information on open source Creative Cloud alternatives applications."/>
+	<meta name="author" content="John Pavlat"/>
+	<meta name="copyright" content="John Pavlat"/>
+	<meta name="robots" content="index,follow"/>
+	<link rel="icon" type="image/svg" href="images/logo-opencloud2.svg"/>
+	<!--<link rel="stylesheet" type="text/less" href="css/opencloud.less"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>-->
+	<link rel="stylesheet" type="text/css" href="css/opencloud.css"/>
+	<script src="scripts/opencloud.js"></script>
+	<title>Contact | The Open Cloud</title>
+</head>
+<body onload="navListen()">
+<div class="wrapper">
+<header>
+	<div id="hamburger" onclick="menu(document.getElementById('topNav'))"><img alt="Click to view navigation" id="burger" src="images/hamburger.png" height="60"/></div>
+	<nav id="topNav">
+		<a href="index.html" id="navLogo"><img src="images/logo-opencloud2.svg" alt="Open Cloud logo" height="80"/></a>
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="news.html">News</a>
+		<a href="contact.html">Contact</a>
+		<a href="legal.html">Legal</a>
+		<!--<a href="programs.html">Programs</a>-->
+	</nav>
+</header>
+
+<main>
+<h1>Contact the Webmaster</h1>
+<p>
+If you have any questions or concerns about the site, or if you'd wanted a personalized recommendation for an alternative based on your specific needs, 
+feel free to send me a form! 
+</p>
+<form action="mailto:REMOVE_THIS_SPAMBLOCKERjtpavlat@earthlink.net" name="contact" enctype="text/plain" onsubmit="return validForm()" method="post">
+<fieldset>
+<legend>Contact Form</legend>
+<label>Name<span>*</span>
+<br/><input tabindex="1" type="text" name="flname" placeholder="Samuel Spade"/></label><br/>
+Gender<br/>
+<label ><input type="radio" tabindex="2" name="gender" value="male"/>Male</label>
+<label><input type="radio" tabindex="2" name="gender" value="female"/>Female</label>
+<br/><label>Email<span>*</span>
+<br/><input tabindex="3" type="email" name="emailAddress" placeholder="ss30@falcon.org"/></label>
+<br/><label>Reason for contacting
+<br/><select tabindex="4" name="Reason for contacting">
+	<option value="concern">Site concern/question</option>
+	<option value="suggestion">Suggest a program</option>
+	<option value="recommend">Ask for a recommendation</option>
+	<option value="other">Other</option>
+</select></label>
+<br/><label>Message:<span>*</span><br/><textarea tabindex="5" name="message" rows="3" cols="20" placeholder="Message..."></textarea></label>
+<br/><label><input tabindex="6" type="submit" value="Submit!"/></label>
+<p><span>*</span>=required</p>
+</fieldset>
+</form>
+<p>
+Submitting the form will take you to a brief email dialogue; please be sure to eliminate the spamblocker I put in front of my email before sending. <br/>
+Thanks for your feedback! 
+</p>
+</main>
+</div>
+
+<footer>
+	<div>
+		Copyright &copy; 2020 John Pavlat. All rights reserved, ironically. 
+		All <a href="https://validator.w3.org/nu/?doc=https://valtapaz.github.io/college/opencloud/contact.html" target="blank">HTML</a> and 
+		<a href="https://jigsaw.w3.org/css-validator/validator?uri=https://valtapaz.github.io/college/opencloud/css/opencloud.css&profile=css3svg&usermedium=all&warning=1&lang=en" target="blank">CSS</a> 
+		on this page is valid. 
+		<br />
+		<a href="privacy.html">Privacy Policy</a> | <a href="sitemap/sitemap.xml">Sitemap</a>
+	</div>
+</footer>
+</body>
+</html>

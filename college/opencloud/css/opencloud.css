@@ -1,0 +1,275 @@
+@font-face {
+  font-family: Aileron;
+  src: url(../fonts/AftaSansThin-Regular.otf);
+}
+header,
+footer,
+article,
+section,
+nav,
+menu {
+  display: block;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #FFF url(../images/opencloudBG.png) no-repeat fixed center;
+  font-family: Aileron;
+  letter-spacing: .03em;
+  font-size: 13pt;
+  display: flex;
+  flex-direction: column;
+}
+#hamburger {
+  display: block;
+  width: 100%;
+  height: calc(60px + 2em);
+  background: linear-gradient(#FFF, rgba(255, 255, 255, 0.2));
+}
+#hamburger img {
+  float: right;
+  transition: transform .5s;
+  transform: rotate(0deg);
+  padding: 1em;
+  padding-right: 2em;
+}
+@media (min-width: 937px) {
+  #hamburger {
+    display: none;
+  }
+}
+.navAll {
+  clear: both;
+  margin: 0px;
+}
+.navAll a {
+  text-decoration: none;
+  color: #d41818;
+}
+.navAll a:hover {
+  color: #ff3d54;
+}
+#topNav {
+  background: linear-gradient(#FFF, rgba(255, 255, 255, 0.2));
+  padding: 1em 0px;
+  clear: both;
+  margin: 0px;
+}
+#topNav a {
+  padding: calc(40px + .5em) 1.8em;
+  margin: 0px;
+  margin-right: -5px;
+}
+#topNav a:hover {
+  background: linear-gradient(#FFF, rgba(255, 255, 255, 0.6));
+}
+@media (max-width: 936px) {
+  #topNav {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.7));
+    padding: 1em 0px;
+    text-align: center;
+    display: none;
+  }
+  #topNav a {
+    padding: 1em 1.8em;
+    display: block;
+  }
+  #topNav #navLogo {
+    display: none;
+  }
+}
+#topNav a {
+  text-decoration: none;
+  color: #d41818;
+}
+#topNav a:hover {
+  color: #ff3d54;
+}
+#subNav {
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6) 25%, rgba(255, 255, 255, 0.9) 50%);
+  position: sticky;
+  padding: 1em;
+  top: 0;
+  z-index: 2;
+  line-height: 2em;
+  text-align: center;
+  clear: both;
+  margin: 0px;
+}
+#subNav a,
+#subNav span {
+  padding: .5em 1.8em;
+  margin: 0px;
+  margin-right: -5px;
+  border-right: 2px solid white;
+}
+#subNav a:hover,
+#subNav span:hover {
+  background: white;
+}
+@media (max-width: 936px) {
+  #subNav {
+    background: rgba(255, 255, 255, 0.8);
+  }
+  #subNav #onPage {
+    display: none;
+  }
+  #subNav a {
+    padding: .3em 1em;
+    border-right: none;
+  }
+  #subNav br {
+    display: none;
+  }
+}
+#subNav a {
+  text-decoration: none;
+  color: #d41818;
+}
+#subNav a:hover {
+  color: #ff3d54;
+}
+img[alt="Open Cloud logo"] {
+  vertical-align: middle;
+  width: auto;
+  /*padding-right:3.6em;*/
+}
+.wrapper {
+  flex: 1 0 auto;
+  margin-bottom: 1em;
+}
+main {
+  margin: 3em;
+  margin-bottom: 2em;
+  clear: both;
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1em 2em;
+  position: relative;
+  transition: top .4s;
+}
+@media (max-width: 668px) {
+  main {
+    margin: 1em;
+  }
+}
+footer {
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  flex-shrink: 0;
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.8));
+  font-size: 11pt;
+}
+footer div {
+  padding: .5em;
+}
+form input,
+form textarea,
+form select {
+  background: #ddeeff;
+  border: 1px solid gray;
+  border-radius: 3px;
+}
+form span {
+  color: red;
+  font-weight: bold;
+}
+form textarea {
+  font-family: sans-serif;
+  max-width: 30em;
+  max-height: 20em;
+}
+video {
+  margin: auto 1em;
+}
+#selection {
+  margin: auto;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+#selection .prog {
+  float: left;
+  padding: 1em;
+  max-width: 10em;
+}
+#selection img {
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+#selection #bord {
+  margin: 2em auto;
+  padding: 1em 0;
+  background: rgba(255, 255, 255, 0.6);
+  display: flex;
+  justify-content: space-around;
+}
+@media (max-width: 608px) {
+  #selection #bord {
+    flex-wrap: wrap;
+  }
+  #selection #bord .prog {
+    max-width: 8em;
+  }
+}
+@media (max-width: 460px) {
+  #selection #bord .prog {
+    max-width: 5em;
+  }
+}
+.progImg {
+  float: right;
+  width: 33.33%;
+  padding: 1em;
+}
+@media (max-width: 608px) {
+  .progImg {
+    display: none;
+  }
+}
+.c-1 {
+  width: 8.33%;
+}
+.c-2 {
+  width: 16.66%;
+}
+.c-3 {
+  width: 25%;
+}
+.c-4 {
+  width: 33.33%;
+}
+.c-5 {
+  width: 41.66%;
+}
+.c-6 {
+  width: 50%;
+}
+.c-7 {
+  width: 58.33%;
+}
+.c-8 {
+  width: 66.66%;
+}
+.c-9 {
+  width: 75%;
+}
+.c-10 {
+  width: 83.33%;
+}
+.c-11 {
+  width: 91.66%;
+}
+.c-12 {
+  width: 100%;
+}
+[class*="c-"]::after {
+  clear: both;
+}

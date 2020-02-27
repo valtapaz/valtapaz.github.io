@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+	<meta name="keywords" content="gimp,free,photoshop,cc,alternative,adobe,linux"/>
+	<meta name="description" content="Does GIMP, the near-universally praised Photoshop alternative, really stack up?"/>
+	<meta name="author" content="John Pavlat"/>
+	<meta name="copyright" content="John Pavlat"/>
+	<meta name="robots" content="index,follow"/>
+	<link rel="icon" type="image/svg" href="images/logo-opencloud2.svg"/>
+	<!--<link rel="stylesheet" type="text/less" href="css/opencloud.less"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js"></script>-->
+	<link rel="stylesheet" type="text/css" href="css/opencloud.css"/>
+	<script src="scripts/opencloud.js"></script>
+	<title>Photoshop | Program Replacements | The Open Cloud</title>
+</head>
+<body onload="navListen()">
+<div class="wrapper">
+<header>
+	<div id="hamburger" onclick="menu(document.getElementById('topNav'))"><img alt="Click to view navigation" id="burger" src="images/hamburger.png" height="60"/></div>
+	<nav id="topNav">
+		<a href="index.html" id="navLogo"><img src="images/logo-opencloud2.svg" alt="Open Cloud logo" height="80"/></a>
+		<a href="index.html">Home</a>
+		<a href="about.html">About</a>
+		<a href="news.html">News</a>
+		<a href="contact.html">Contact</a>
+		<a href="legal.html">Legal</a>
+		<!--<a href="programs.html">Programs</a>-->
+	</nav>
+</header>
+<nav id="subNav">
+	<span id="onPage">On this page:</span>
+	<a href="#top">Top</a>
+	<a href="#about">About</a>
+	<a href="#replacement">Replacements</a>
+	<a href="#downsides">Downsides</a>
+	<a href="#advantages">Advantages</a>
+	<a href="#media">Media</a>
+</nav>
+
+<main>
+<!--<div id="selection">
+	<h1>Choose a Program to Replace</h1>
+	<div id="bord">
+		<a href="ps.html">
+			<div class="prog">
+				<img src="images/logos/cc/PS.svg" alt="Find an alternative to Photoshop"/><br/>Photoshop
+			</div>
+		</a>
+		<a href="ai.html">
+		<div class="prog">
+				<img src="images/logos/cc/AI.svg" alt="Find an alternative to Illustrator"/><br/>Illustrator
+			</div>
+		</a>
+		<a href="pr.html">
+			<div class="prog">
+				<img src="images/logos/cc/PR.svg" alt="Find an alternative to Premiere Pro"/><br/>Premiere Pro
+			</div>
+		</a>
+		<a href="ae.html">
+			<div class="prog">
+				<img src="images/logos/cc/AE.svg" alt="Find an alternative to After Effects"/><br/>After Effects
+			</div>
+		</a>
+	</div>
+</div>-->
+<img class="progImg" src="images/logos/gimp-logo.svg" alt="GIMP's logo: a stylized, doglike creature called Wilbur."/>
+<h1>The GIMP</h1>
+<p>
+It isn't a surprise that this program is the one that challenges what many regard as the definitive image manipulation tool. 
+<a href="https://gimp.org" title="The GIMP Official Website" target="_blank">GIMP</a>, or the GNU Image Manipulation Program, 
+almost prides itself on being a free and open source Photoshop alternative. But how does the program actually stack up? 
+<span id="about"></span></p>
+<h2>About</h2>
+<p>
+First launched in 1996, GIMP has grown from a slow-to-load, somewhat awkward multi-windowed program into a well-featured program that easily holds up on its own. 
+While it can run a little slow when using large brush sizes, it's remarkably stable, enough so that one could potentially even associate it with proprietary software, 
+if not for its cartoon-character logo and its extraordinary range of customization options. 
+</p>
+<h2 id="replacement">As a Replacement...</h2>
+<p>
+GIMP and Photoshop are reasonably similar, although their methods of getting to places are somewhat different. Both programs tend to assume that you know what you're doing, 
+and neither one comes with the assumption that you're more familiar with the other. The largest difference is that GIMP treats Photoshop's near-default Transform tool, 
+used by the easy-to-reach V key, is replaced by the Unified Transform Tool, hidden in the middle of the toolbox and reached using Shift+T 
+(notably, as with Photoshop's CC 2019 update, scaling is automatically proportionate here). 
+The tradeoff, however, is that the Unified Transform Tool can also be used in place of the Shear and Perspective tools. 
+Accessing the GIMP's filters is virtually the same process as it is in Photoshop (Menu Bar / Filter), even if GIMP lacks Photoshop's photo gallery, 
+and several of Photoshop's tools are carried over fairly directly. <span id="downsides"></span>
+</p>
+<h2>Downsides</h2>
+<p>
+The main issue where GIMP fails to kick off on is nondestructive editing. 
+Like Photoshop, it does include opacity masks, but beyond that its lack of nondestructive tools can be a harrowing experience for those used to Photoshop: 
+smart objects, layer effects and even adjustment layers aren't currently supported, meaning that any changes to a layer (including scaling it down) are effectively permanent. 
+Fortunately, all three of these features are listed in <a href="https://wiki.gimp.org/wiki/Roadmap" target="_blank">GIMP's official roadmap page</a> 
+(apparently they have to finish porting the program to the <a href="https://gegl.org/" target="_blank">GEGL</a> graphics library for it to work), 
+though it'll probably be a while until we see some of them implemented. 
+</p>
+<p>
+Perhaps more frustrating is the fact that only one layer can be selected at a time. While I'm certain one can attempt to fix this with layer groups, 
+this hasn't worked very well for me and can still turn problematic at times. 
+This, combined with the lack of adjustment layers, makes it very difficult to work with multiple layers: 
+adjusting the color of an overall image would require merging all the layers and applying a color correction effect over the image in general 
+(I tried to fake this using a group, though apparently layer groups don't support color correction). 
+</p>
+<p>
+On top of this, some may draw attention to its lack of CMYK support; while this isn't an issue for me (and recent updates to the program have been helping on this end), 
+it will be one for anyone working in the print medium, so how that affects the workflow will vary based on what the program's being used for. 
+A minor qualm is also that the program's custom Open window feels a little inconvenient, but this doesn't actually affect the workflow itself. <span id="advantages"></span>
+</p>
+<h2>Advantages</h2>
+<p>
+Despite these sour notes, GIMP actually surpasses Photoshop at one particular point: selection. 
+GIMP's lasso tool combines the Polygonal Lasso and standard Lasso tools from Photoshop, 
+enabling one to click and drag in a freehand manner and click multiple times in a polygonal manner with the same selection, which I found an extraordinary time saver. 
+The marquee and elipse selection tool offer their own twist on selection: immediately after making a circlular or rectangular selection, 
+one can scale the selection similar to how one would scale a layer. 
+</p>
+<h2>The Bottom Line</h2>
+<p>
+GIMP is an extremely powerful editor that's come a long way within the last several years, and it's looking like it'll improve more as time goes on. 
+I presume the question for most will be whether the price is worth the lack of adjustment layers and smart objects; 
+one can keep an unmodified duplicate around in the meantime, but GIMP is ultimately a fantastic (if a little limited) tool. <span id="media"></span>
+</p>
+<h2>Media</h2>
+<p>
+Here are two videos showing me making a basic image in both Gimp and Photoshop. 
+Most of the footage is real time, though both videos are clipped and sped a little at some points to show how someone more familiar with each program would do it 
+(notably, as I have a relatively large amount of experience in Photoshop, the time I took on each doesn't necessarily mean that one program is more time-efficient than the other). 
+</p>
+<video width="400" height="225" controls>
+	<source src="media/gimp.mp4" type="video/mp4"/>
+	Your browser does not yet support the HTML5 video tag; please see the description below for the essential points. 
+</video>
+<video width="400" height="225" controls>
+	<source src="media/photoshop.mp4" type="video/mp4"/>
+	Your browser does not yet support the HTML5 video tag; please see the description below for the essential points. 
+</video>
+<p>
+The videos show the same function: compositing a lens flare image and a sparks image with an addative blending mode onto an image of a forest, 
+then color grading each layer with a Curves adjustment. GIMP's lack of adjustment layers and other multi-layer tools becomes sorely apparent here 
+(although it thankfully saves recently used Curves adjustments, allowing one to load them), 
+although Photoshop's separate lasso tools are left far behind by GIMP's combined freehand/polygonal tool. 
+Oddly enough, I was having an issue with GIMP's eraser tool not working on layers, forcing me to use masking instead; 
+I haven't particularly seen this error before, although an online article noted that reinstalling the program can fix it. 
+</p>
+</main>
+</div>
+
+<footer>
+	<div>
+		Copyright &copy; 2020 John Pavlat. All rights reserved, ironically. 
+		All <a href="https://validator.w3.org/nu/?doc=https://valtapaz.github.io/college/opencloud/ps.html" target="blank">HTML</a> and 
+		<a href="https://jigsaw.w3.org/css-validator/validator?uri=https://valtapaz.github.io/college/opencloud/css/opencloud.css&profile=css3svg&usermedium=all&warning=1&lang=en" target="blank">CSS</a> 
+		on this page is valid. 
+		<br />
+		<a href="privacy.html">Privacy Policy</a> | <a href="sitemap/sitemap.xml">Sitemap</a>
+	</div>
+</footer>
+</body>
+</html>
