@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<meta name="description" content="The online portfolio of John 'Tom' Pavlat, a simultaneous web designer and developer who specializes in front-end HTML and CSS."/>
+<meta name="keywords" content="portfolio,developer,web design,front-end,html,css"/>
+<title>John Pavlat, Web Developer</title>
+<link rel="icon" type="image/png" href="images/logo1.png"/>
+<link rel="stylesheet" type="text/css" href="jtp-main.css"/>
+<script src="jtp-main.js"></script>
+</head>
+<body class="parallax" data-scrollrate=".7">
+
+<div class="parallax" id="topVine" data-scrollrate=".5" data-scrolltype="pos"></div>
+<div class="parallax" id="rightVine" data-scrollrate=".6" data-scrolltype="pos"></div>
+<div class="wrapper parallax" data-scrollrate=".3">
+
+<header class="parallax" data-scrollrate="-.3" data-scrolltype="pos">
+	<h1>John Pavlat</h1><span>Web designer & developer</span>
+	
+	<ul>
+		<li><a href="#about">About</a></li>
+		<li><a href="#resume">Resume</a></li>
+		<li><a href="#portfolio">Portfolio</a></li>
+		<li><a href="#contact">Contact</a></li>
+		<!--<li>About</li>
+		<li>Resume</li>
+		<li>Portfolio</li>
+		<li>Contact</li>-->
+	</ul>
+</header>
+
+<section id="about">
+	<h2>Welcome to my portfolio!</h2>
+	<p>
+		Hello! I'm John, a web designer and developer based in Prince George's County, Maryland. 
+		Eager to bring my clients' visions to life, I'm unafraid to work independently but remain willing to ask for clarifications, 
+		keeping self-improvement in mind to become the best asset I can be. 
+	<!--<br/><u class="trigger" onclick="toggleBasic(document.querySelector('#aboutExpansion'),this)">More&hellip;</u>-->
+	</p>
+	<!--<div id="aboutExpansion">-->
+	<p>
+		Holding an animation/multimedia certificate from Prince George's Community College and a Bachelor's degree in digital media and web technology from the University of Maryland Global Campus, 
+		I plan to continue honing my skills after college, 
+		borrowing from a background in art and graphic design to create sites that prize atmosphere and visual balance. 
+	</p>
+	<p>
+		Web technology has always been subject to change, and I intend to keep myself up to date by looking into new features for platforms and languages as soon as they're updated while 
+		emphasizing the timeless theories at the core of Web design and keeping compatibility in mind. While my earliest websites were built with desktop machines in mind, 
+		my later websites continuously apply responsive design techniques to ensure that they fit any screen size without needing a secondary page or mobile site.
+	</p>
+	<p>
+		I primarily work in HTML, CSS and JavaScript for my sites, although I have also have experience designing sites in website-building platforms including Wix, Weebly and Google Sites. 
+		I first learned how to code for the Web in 2015, and from there I took to building sites in HTML as a hobby before turning it into both a college major and a profession. 
+		For more information, you can send an email to <a href="mailto:&#106;&#116;&#112;&#97;&#118;&#108;&#97;&#116;&#64;&#101;&#97;&#114;&#116;&#104;&#108;&#105;&#110;&#107;&#46;&#110;&#101;&#116;">
+		&#106;&#116;&#112;&#97;&#118;&#108;&#97;&#116;&#64;&#101;&#97;&#114;&#116;&#104;&#108;&#105;&#110;&#107;&#46;&#110;&#101;&#116;</a> or send a text to +1 (301) 204-7250 for questions. 
+	</p>
+	<!--</div>-->
+	<span id="resume"></span>
+	<p>
+		Feel free to <a href="documents/John_T_Pavlat_Resume.pdf" target="_blank">download my resume</a> or 
+		<u class="trigger" onclick="toggleAdvanced(document.getElementById('resumeContainer'))">view it on this page</u>.
+	</p>
+</section>
+
+<div id="resumeContainer">
+	<h1>John Pavlat</h1>
+	<img id="cornerX" onclick="toggleAdvanced(document.getElementById('resumeContainer'))" src="images/x2.png" alt="click to close">
+	<iframe src="documents/John_T_Pavlat_Resume.pdf" id="resumeFrame"></iframe>
+</div>
+
+<section id="portfolio">
+	<h2>Sites</h2>
+	<p>
+		I first discovered HTML in 2015, leading me to create <em>The Zoom Times</em>, a companion website to my family's blog. 
+		After working on a number of college-related sites and exercises, 
+		my first professional website launched in 2019 for Dr. Melissa Zebley's <em>Mobile Vet to Pet</em> service. 
+		I'm currently working on two additional websites (for a land development company and a religious group; further links will be added upon completion), though I'm always up for more. 
+	</p>
+		
+	<div class="siteBox">
+		<a href="https://valtapaz.github.io/ZoomTimes/" target="blank"><img src="images/siteZoomtimes.png" class="sitePic" alt="Zoom Times website"></a>
+		<p>
+			John's first coded website, <em>The Zoom Times</em>, was built in 2015 as a capstone project for an Internet Technology course as a complementary site to his family's blog. 
+			It has recieved various updates since its inception, from semantic improvements under the hood to a reworked logo and more universal browser compatibility; 
+			more information about its changes are documented in the site's dedicated change log. 
+		</p>
+		<p class="visitLink"><a href="https://valtapaz.github.io/ZoomTimes/" target="blank">Visit the Zoom Times Site</a></p>
+	</div>
+	<div class="siteBox">
+		<a href="https://valtapaz.github.io/turbulence/" target="blank"><img src="images/siteTurbulence.png" class="sitePic" alt="Turbulence website"></a>
+		<p>
+			After a number of courses that taught through exercises rather than assigning complete sites, John's next major website took on a more modern approach in Spring of 2019, 
+			emphasizing similar concepts to those found in feature film websites with the stated intent of hand-coding a site that looked like it had been made with a higher-end Web design platform. 
+			The website, based on John's fictional works, takes on a dark atmosphere with a seemingly simple flat aesthetic that hides a variety of CSS tools. 
+			Notably, the website utilizes pure CSS to imitate the effects of JavaScript&mdash;from popup windows to a background that appears to change color as a user scrolls, 
+			this site pushed John's abilities with CSS to their greatest extent. 
+		</p>
+		<p class="visitLink"><a href="https://valtapaz.github.io/turbulence/" target="blank">Visit the Turbulence Site</a></p>
+	</div>
+	<div class="siteBox">
+		<a href="https://valtapaz.github.io/college/opencloud/" target="blank"><img src="images/siteOpencloud.png" class="sitePic" alt="Open Cloud website"></a>
+		<p>
+			The third non-exercise college website John took on, from Fall 2019, takes on a lower-fi approach, 
+			shifting the emphasis from CSS features to JavaScript integration and ease of use on mobile devices 
+			(among other features, this site employs a collapsible &ldquo;hamburger&rdquo; menu for smaller screens) 
+			and more professional under-the-hood features such as SEO optimization, XML sitemaps and preprocessed LESS styling. 
+			Premised on comparing open source programs' features to those of programs in Adobe's cloud-based suite 
+			and switching out his previous site's dark atmosphere with a homemade feel and tongue-in-cheek writing style, 
+			the website aims to subtly integrate HTML, CSS and JavaScript into a cohesive whole.
+		</p>
+		<p class="visitLink"><a href="https://valtapaz.github.io/college/opencloud" target="blank">Visit the Open Cloud Site</a></p>
+	</div>
+	<div class="siteBox">
+		<a href="https://jtpavlat.wixsite.com/video" target="blank"><img src="images/siteVideo3.png" class="sitePic" alt="Video Editing/VFX Portfolio Website"></a>
+		<p>
+			Rounding out his college experience in Web technology, John took to the Wix platform to document his video editing and visual effects work. 
+			John designed the site to keep potential employers scrolling, utilizing both sheer features offered by the design platform 
+			(including a video background and paragraphs fading in upon scrolling to them) 
+			and graphic design principles meant to give an atmosphere reminiscent of his Turbulence site while pointing to his skills in editing and visual effects. 
+		</p>
+		<p class="visitLink"><a href="https://jtpavlat.wixsite.com/video" target="blank">Visit John's Video Editing and VFX Portfolio Site</a></p>
+	</div>
+	<div class="siteBox">
+		<a href="http://www.mobilevettopet.com/" target="blank"><img src="images/siteVettopet.png" class="sitePic" alt="Vet to Pet website"></a>
+		<p>
+			John's first professional site was an overhaul of Dr. Melissa Zebley's <em>Mobile Vet to Pet</em> site. 
+			The prompt asked for a mobile-friendly, blue-and green redesign with a clean aesthetic, placing an emphasis on accessibility and a fresh atmosphere. 
+			In addition to eight pages coded with HTML, CSS and JavaScript, John also gave the title and logo a modernized look, 
+			modified a PDF form to add fillable elements, and created an interactive service area map via Google Maps. 
+		</p>
+		<p class="visitLink"><a href="http://www.mobilevettopet.com/" target="blank">Visit the Mobile Vet to Pet Site</a></p>
+	</div>
+		
+</section>
+
+
+<footer id="contact">
+	<h2>Contact</h2>
+	<div id="thirds">
+		<div>
+			<span>
+			<h3>Mailing Address</h3>
+			5709 Goucher Drive
+			<br/>Berwyn Heights, MD
+			<br/>20740
+			</span>
+		</div>
+		<div>
+			<span>
+			<h3>E-mail</h3>
+			<a href="mailto:&#106;&#116;&#112;&#97;&#118;&#108;&#97;&#116;&#64;&#101;&#97;&#114;&#116;&#104;&#108;&#105;&#110;&#107;&#46;&#110;&#101;&#116;">
+			&#106;&#116;&#112;&#97;&#118;&#108;&#97;&#116;&#64;<br id="emailSplit"/>&#101;&#97;&#114;&#116;&#104;&#108;&#105;&#110;&#107;&#46;&#110;&#101;&#116;</a>
+			</span>
+		</div>
+		<div>
+			<span>
+			<h3>Phone</h3>
+			Home: <a href="&#116;&#101;&#108;&#58;(&#51;&#48;&#49;)345-8&#48;77">(301) 345-8077</a>
+			<br/>Cell (text preferred): <a href="&#116;&#101;&#108;:(301)204-7250">(301) 204-7250</a>
+			</span>
+		</div>
+	</div>
+	<span>Copyright &copy; 2020 John Pavlat. All rights reserved.</span>
+</footer></div>
+<div class="bugCatcher"><span id="bugContainer1" class="parallax" data-scrollrate=".3"><img class="parallax" src="images/beetle-1-z.png" alt="decorational beetle" data-scrollrate=".3"/></span>
+<span id="bugContainer2" class="parallax" data-scrollrate=".3"><img class="parallax" src="images/bug-1.png" alt="decorational beetle 2" data-scrollrate=".3"/></span></div>
+
+</body>
+</html>
