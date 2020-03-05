@@ -182,7 +182,7 @@ footer h2 {
 	margin-bottom:1em;
 }
 #thirds h3 {margin:0;}
-#thirds div {
+.third {
 	display:flex;
 	align-items:center;
 	flex-flow:column;
@@ -194,7 +194,7 @@ footer h2 {
 	border-right:1px solid #111;*/
 	width:100%;
 }
-footer span {padding:1em .5em;}
+.third div, footer span {padding:1em .5em;}
 #emailSplit {display:none;}
 /*----------------------------Media Queries----------------------------*/
 @media only screen and (max-width:1400px) {.siteBox {margin:2em 5em;}}
