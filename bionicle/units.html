@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<!--<link rel="stylesheet" type="text/css" href="uc.css"/>-->
+<title>Matoran Unit Converter</title>
+<style>
+@font-face {font-family:metrumatoran;src:url(metrumatoran.woff);}
+@font-face {font-family:voya;src:url(VoyaNui.ttf);}
+@font-face {font-family:faded;src:url(Faded.ttf);}
+h1 {
+	font-weight:normal;
+	font-family:metrumatoran, "Trajan Pro 3", "Trajan Pro";
+	font-size:2em;
+	text-align:center;
+}
+html {
+	min-height: 100%;
+	background: linear-gradient(rgba(130,130,130,.2), rgba(130,130,130,.2)),
+	url(https://2.bp.blogspot.com/-R66Rp1fCHXQ/T4FojxjP2gI/AAAAAAAAAEo/Bmge8VUCdp4/s4500/Early+bionicle_first+Mata+Nui+color+map.jpg);
+	background-repeat: no-repeat;
+	background-position: 30% 61.5%;
+}
+body {font-family: "Trajan Pro 3";}
+input[type=button] {
+	background-image: url(block.png);
+	background-size: 300%;
+	border-color: #BB8866;
+	background-color: #BB8866;
+}
+* {box-sizing:border-box;}
+main {
+	display:flex;
+	justify-content:space-around;
+}
+select {display:block;}
+
+main div select {
+	color:#EFB;
+	font-family:"Trajan Pro 3";
+	font-size:12pt;
+	background:url(block.png) tan;
+	border:none;
+	border-radius:5px 5px 0 0;
+	padding:.25em 0;
+	text-align:center;
+	margin:auto;
+	width:100%;
+}
+main div select option {
+	font-weight:normal;
+	font-family:sans-serif;
+	color:black;
+}
+#inputter, #finishedOutput {
+	background:#A86;
+	background:#A86E;
+	border:none;
+	font-family:"Trajan Pro 3";
+	font-size:12pt;
+	margin:auto;
+	display:block;
+	padding:1em;
+	width:100%;
+}
+footer {
+	position:absolute;
+	bottom:.25em;
+	font-size:11pt;
+}
+.cs {width:4.17%;}
+.c1 {width:8.33%;}
+.c1s {width:12.5%;}
+.c2 {width:16.66%;}
+.c2s {width:20.83%;}
+.c3 {width:25%;}
+.c4 {width:33.33%;}
+.c5 {width:41.66%;}
+.c6 {width:50%;}
+.c7 {width:58.33%;}
+.c8 {width:66.66%;}
+.c9 {width:75%;}
+.c10 {width:83.33%;}
+.c11 {width:91.66%;}
+.c12 {width:100%;}
+</style>
+
+</head>
+<body onload="convert(document.getElementById('inputter').value,document.getElementById('fromU').value,document.getElementById('toU').value)">
+
+<h1>Matoran Unit Converter</h1>
+<main>
+
+<div class="c5">
+<select name="fromU" id="fromU" onchange="convert(document.getElementById('inputter').value,document.getElementById('fromU').value,document.getElementById('toU').value)">
+	<option value="feet">		Feet</option>
+	<option value="miles">		Miles</option>
+	<option value="meters">		Meters</option>
+	<option value="kilometers">	Kilometers</option>
+	<option value="bio">		Bio</option>
+	<option value="kio">		Kio</option>
+	<option value="mio">		Mio</option>
+</select>
+<input id="inputter" placeholder="0" onkeyup="convert(this.value,document.getElementById('fromU').value,document.getElementById('toU').value)">
+</div>
+
+<div class="c5">
+<select name="toU" id="toU" onchange="convert(document.getElementById('inputter').value,document.getElementById('fromU').value,document.getElementById('toU').value)">
+	<option value="bio">		Bio</option>
+	<option value="kio">		Kio</option>
+	<option value="mio">		Mio</option>
+	<option value="feet">		Feet</option>
+	<option value="miles">		Miles</option>
+	<option value="meters">		Meters</option>
+	<option value="kilometers">	Kilometers</option>
+</select>
+<div id="finishedOutput"></div>
+</div>
+
+<script>
+function convert(input,fromU,toU) {
+	let output = document.getElementById("finishedOutput");
+	let converted;
+	let result;
+	if (fromU == "feet") {converted = input/4.5;}
+	else if (fromU == "miles") {converted = input/4.5*5280;}
+	else if (fromU == "meters") {converted = input/1.3716;}
+	else if (fromU == "kilometers") {converted = input/1.3716*1000;}
+	else if (fromU == "bio") {converted = input;}
+	else if (fromU == "kio") {converted = input*1000;}
+	else if (fromU == "mio") {converted = input*1000000;}
+	//alert(converted);
+	if (toU == "feet") {result = converted*4.5;}
+	else if (toU == "miles") {result = converted*4.5/5280;}
+	else if (toU == "meters") {result = converted*1.3716;}
+	else if (toU == "kilometers") {result = converted*1.3716/1000;}
+	else if (toU == "bio") {result = converted;}
+	else if (toU == "kio") {result = converted/1000;}
+	else if (toU == "mio") {result = converted/1000000;}
+	output.innerHTML = result;
+}
+</script>
+
+</main>
+
+<footer>
+Code copyright &copy; 2020 Mxyl Valtapaz; Matoran unit concepts copyright &copy; The LEGO Group.
+</footer>
+</body>
+</html>
