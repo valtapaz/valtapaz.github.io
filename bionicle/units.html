@@ -6,15 +6,11 @@
 <!--<link rel="stylesheet" type="text/css" href="uc.css"/>-->
 <title>Matoran Unit Converter</title>
 <style>
-@font-face {font-family:metrumatoran;src:url(metrumatoran.woff);}
+@font-face {font-family:cinzel;src:url(Cinzel-Regular.otf);}
+/*@font-face {font-family:metrumatoran;src:url(metrumatoran.woff);}
 @font-face {font-family:voya;src:url(VoyaNui.ttf);}
-@font-face {font-family:faded;src:url(Faded.ttf);}
-h1 {
-	font-weight:normal;
-	font-family:metrumatoran, "Trajan Pro 3", "Trajan Pro";
-	font-size:2em;
-	text-align:center;
-}
+@font-face {font-family:faded;src:url(Faded.ttf);}*/
+* {box-sizing:border-box;}
 html {
 	min-height: 100%;
 	background: linear-gradient(rgba(130,130,130,.2), rgba(130,130,130,.2)),
@@ -22,14 +18,19 @@ html {
 	background-repeat: no-repeat;
 	background-position: 30% 61.5%;
 }
-body {font-family: "Trajan Pro 3";}
+body {font-family: cinzel, "Trajan Pro 3", serif;}
 input[type=button] {
 	background-image: url(block.png);
 	background-size: 300%;
 	border-color: #BB8866;
 	background-color: #BB8866;
 }
-* {box-sizing:border-box;}
+h1 {
+	font-weight:normal;
+	font-family:metrumatoran, cinzel, "Trajan Pro 3", "Trajan Pro", serif;
+	font-size:2em;
+	text-align:center;
+}
 main {
 	display:flex;
 	justify-content:space-around;
@@ -38,7 +39,7 @@ select {display:block;}
 
 main div select {
 	color:#EFB;
-	font-family:"Trajan Pro 3";
+	font-family:cinzel, "Trajan Pro 3", serif;
 	font-size:12pt;
 	background:url(block.png) tan;
 	border:none;
@@ -57,7 +58,7 @@ main div select option {
 	background:#A86;
 	background:#A86E;
 	border:none;
-	font-family:"Trajan Pro 3";
+	font-family:cinzel, "Trajan Pro 3", serif;
 	font-size:12pt;
 	margin:auto;
 	display:block;
