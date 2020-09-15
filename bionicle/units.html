@@ -19,12 +19,13 @@ html {
 	background-position: 30% 61.5%;
 }
 body {font-family: cinzel, "Trajan Pro 3", serif;}
-input[type=button] {
+/*input[type=button] {
 	background-image: url(block.png);
 	background-size: 300%;
 	border-color: #BB8866;
 	background-color: #BB8866;
-}
+}*/
+input {border-radius:0;}
 h1 {
 	font-weight:normal;
 	font-family:metrumatoran, cinzel, "Trajan Pro 3", "Trajan Pro", serif;
@@ -36,7 +37,6 @@ main {
 	justify-content:space-around;
 }
 select {display:block;}
-
 main div select {
 	color:#EFB;
 	font-family:cinzel, "Trajan Pro 3", serif;
@@ -85,6 +85,13 @@ footer {
 .c10 {width:83.33%;}
 .c11 {width:91.66%;}
 .c12 {width:100%;}
+@media only screen and (max-width:500px) {
+	main .c5 {
+		margin:.5em auto;
+		width:83.33%;
+	}
+	main {flex-flow:column;}
+}
 </style>
 
 </head>
@@ -92,7 +99,6 @@ footer {
 
 <h1>Matoran Unit Converter</h1>
 <main>
-
 <div class="c5">
 <select name="fromU" id="fromU" onchange="convert(document.getElementById('inputter').value,document.getElementById('fromU').value,document.getElementById('toU').value)">
 	<option value="feet">		Feet</option>
@@ -105,7 +111,8 @@ footer {
 </select>
 <input id="inputter" placeholder="0" onkeyup="convert(this.value,document.getElementById('fromU').value,document.getElementById('toU').value)">
 </div>
-
+<!--<div class="cs"></div>
+<div class="cs"></div>-->
 <div class="c5">
 <select name="toU" id="toU" onchange="convert(document.getElementById('inputter').value,document.getElementById('fromU').value,document.getElementById('toU').value)">
 	<option value="bio">		Bio</option>
