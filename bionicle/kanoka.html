@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Kanoka Disk Reader</title>
+<!--<script src="kanoka.js"></script>
+<link rel="stylesheet" type="text/css" href="kanoka.css" />-->
+<style>
+@font-face {
+	font-family:orbitronB;
+	src:url(orbitron-medium.otf);
+}
+@font-face {
+	font-family:orbitronL;
+	src:url(orbitron-light.otf);
+}
+@font-face {
+	font-family:metrumatoran;
+	src:url(metrumatoran.woff);
+}
+
+header {
+	font-family:orbitronB;
+	margin:1em;
+	padding:.3em;
+	font-size:2em;
+	text-align:center;
+	background:linear-gradient(to right,rgba(255,255,255,0),rgba(255,255,255,1),rgba(255,255,255,0));
+}
+html {
+	min-height: 100%;
+	background:no-repeat 30% 61.5% url(MNConcept3.jpg);
+}
+body {
+	font-family:orbitronL, "Trajan Pro 3";
+	margin:0;
+	padding:0;
+}
+footer {
+	position:fixed;
+	bottom:5em;
+	padding:.1em;
+	font-size:10pt;
+	background:linear-gradient(to right,rgba(255,255,255,1)80%,rgba(255,255,255,0));
+}
+
+form, #AH {margin:2em;}
+input[type=text] {
+	background-color:rgba(157,150,142,.3);
+	text-align:center;
+	border-color:#AAA;
+}
+input[type=button] {
+	border-color:#BBB;
+	background-color:#BBB;
+}
+
+#theDiv {
+	background-color:rgba(255,255,255,.7);
+	margin:auto;
+	width:90%;
+	min-height:30vh;
+	padding:2em;
+	display:flex;
+	flex-direction:column;
+	justify-content:space-around;
+	align-items:center;
+}
+
+</style>
+</head>
+<body>
+
+<header>Kanoka Disk Reader</header>
+
+<div id="theDiv">
+<form>
+<label>
+Enter a Number
+<br />
+<input type="text" id="diskID" name="diskNum"/>
+<input type="button" value="Submit" id="kanokaSubmit" onclick="kanokaDetermine()" />
+</label>
+</form>
+
+<div id="AH">Enter a Kanoka number to find the disk's power!</div>
+<div id="details"></div>
+<div id="trivia"></div>
+
+</div>
+
+<footer>Kanoka Disk Reader coded by Mxyl Valtapaz. Thanks to MtMNC of BioSector01 for the Matoran font and Christian Faber for the Metru Nui background.</footer>
+<script>
+//Matoran Unit Converter coded by Mxyl Valtapaz. Thanks to MtMNC of BioSector01 for the Matoran font and Christian Faber for the Mata Nui artwork.
+
+function kanokaDetermine() {
+	var diskID = document.getElementById("diskID");
+	var knMetru = Number(diskID.value[0]);
+	var knPowerKind = Number(diskID.value[1]);
+	var knPowerLv = Number(diskID.value[2]);
+	var met;
+	var typ;
+	var pow;
+	if (knMetru === 1) {
+		met = "a Ta";
+	} else if (knMetru === 2) {
+		met = "a Ga";
+	} else if (knMetru === 3) {
+		met = "a Po";
+	} else if (knMetru === 4) {
+		met = "a Ko";
+	} else if (knMetru === 5) {
+		met = "a Le";
+	} else if (knMetru === 6) {
+		met = "an Onu";
+	} else {
+		met = "(Invalid)";
+	}
+	if (knPowerKind === 1) {typ = "Reconstitute at Random";}
+	else if (knPowerKind === 2) {typ = "Freeze";}
+	else if (knPowerKind === 3) {typ = "Weaken";}
+  else if (knPowerKind === 4) {typ = "Remove Poison";}
+  else if (knPowerKind === 5) {typ = "Enlarge";}
+  else if (knPowerKind === 6) {typ = "Shrink";}
+  else if (knPowerKind === 7) {typ = "Regenerate";}
+  else if (knPowerKind === 8) {typ = "Teleport";}
+  else if (knPowerKind === 9) {typ = "Time";}
+	document.getElementById('trivia').innerHTML = "";
+	document.getElementById('AH').innerHTML = "You have " + met + "-Metru " + typ + " disk, power level " + knPowerLv + "!";
+	if (typ === "Time") {
+		document.getElementById('AH').innerHTML = "You have " + met + "-Metru Disk of " + typ + ", power level " + knPowerLv + "!";
+	}
+	
+	if (knMetru === 1 && knPowerKind === 1 && knPowerLv === 4) {
+		document.getElementById('trivia').innerHTML = "A disk with this code was used by Nuhrii to transform a strain of the Morbuzakh vine into a grotesque form, ";
+		document.getElementById('trivia').innerHTML += "the shock of the transformation forcing the Morbuzakh to let him and Vakama go free.";
+	} else if (knMetru === 1 && knPowerKind === 5 && knPowerLv === 9) {
+		document.getElementById('trivia').innerHTML = "This Kanoka was the Great Disk of Fire, found by Nuhrii and retrieved by Toa Vakama from a fire pit during a close encounter with the Morbuzakh.";
+	} else if (knMetru === 2 && knPowerKind === 7 && knPowerLv === 9) {
+		document.getElementById('trivia').innerHTML = "This Kanoka was the Great Disk of Water, found by Vhisola and retrieved by Toa Nokama from the teeth of a massive creature under the Great Temple.";
+	} else if (knMetru === 3 && knPowerKind === 3 && knPowerLv === 9) {
+		document.getElementById('trivia').innerHTML = "This Kanoka was the Great Disk of Stone, found by Ahkmou and retrieved by Toa Onewa from the top of a statue.";
+	} else if (knMetru === 4 && knPowerKind === 2 && knPowerLv === 9) {
+		document.getElementById('trivia').innerHTML = "This Kanoka was the Great Disk of Ice, found by Ehrye and retrieved by Toa Nuju from a massive icicle on the outside of a knowledge tower.";
+	} else if (knMetru === 5 && knPowerKind === 8 && knPowerLv === 9) {
+		document.getElementById('trivia').innerHTML = "This Kanoka was the Great Disk of Air, found by Orkham and retrieved by Toa Matau from a force sphere in the chute network that would have destroyed the disk if it were left inside.";
+	} else if (knMetru === 6 && knPowerKind === 1 && knPowerLv === 9) {
+		document.getElementById('trivia').innerHTML = "This Kanoka was the Great Disk of Earth, found by Tehutti and retrieved by Toa Whenua and Nuju in the Onu-Metru Archives.";
+	} else if (knMetru === 1 && knPowerKind === 9 && knPowerLv === 9) {
+		document.getElementById('trivia').innerHTML = "The Great Disk of Time, merged from the six great disks by Toa Vakama. The same Toa forged this disk into the Kanohi Vahi, one of the most powerful masks in existence.";
+	} 
+}
+	// bioBI/bio = Matoran to Imperial; bioBM/bioM = Matoran to Metric
+	
+	/*
+    1 Ta-Metru: Stronger, could knock obstacles out of the way.
+    2 Ga-Metru: Could change direction in mid-air according to the user's thoughts.
+    3 Po-Metru: Homed in on other Kanoka and deflected them from their course.
+    4 Ko-Metru: Dodged obstacles to get to target.
+    5 Le-Metru: Flew farther.
+    6 Onu-Metru: Returned to thrower if diverted from course.
+	
+	1. Reconstitutes at random - Temporarily scrambles the molecules of the target, resulting in a new shape.
+	2. Freezes - Covers the target in a thick coating of ice.
+	3. Weakens - Reduces the strength of a living or nonliving target. Can be used to bring down structures.
+  4. Removes poison - Cures the effects of toxic substances.
+  5. Enlarges - Causes target to grow. Rate of growth is tied to the power level of the disk.
+  6. Shrinks - Causes target to reduce in size. Rate of shrinkage is tied to the power level of the disk.
+  7. Regenerates - Can be used to repair a target, normally a structure or piece of equipment.
+  8. Teleports - Moves target to another location. Range of teleportation is tied to the power level of the disk.
+	
+	Standard power comes from 1 to 8; only great disks are at level 9.
+	*/
+</script>
+</body>
+</html>
